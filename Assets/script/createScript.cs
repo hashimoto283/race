@@ -43,7 +43,7 @@ public class createScript : MonoBehaviour
     void CreateEnemy()
     {
         int index = Random. Range(0, randomObjects.Length);
-        Instantiate(randomObjects[index], new Vector3(Random.Range(-5f,5f), 0f, enemyBorder +150f), randomObjects[index].transform.rotation);
+        Instantiate(randomObjects[index], new Vector3(Random.Range(-5f,5f), randomObjects[index].transform.position.y, enemyBorder +150f), randomObjects[index].transform.rotation);
         enemyBorder += 150;
     }
 }
