@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class timescript : MonoBehaviour
+public class TimeScript : MonoBehaviour
 {
     public Text timeText;
     public float time = 60;
@@ -29,6 +29,10 @@ public class timescript : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
         }
+    }
+    public void AddTime(float amountTime)
+    {
+        time += amountTime;
     }
 }
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class createScript : MonoBehaviour
+public class CreateScript : MonoBehaviour
 {
     //public GameObject Enemy;
     //public GameObject barricade;
@@ -10,7 +10,7 @@ public class createScript : MonoBehaviour
     public GameObject Ground2;
     public GameObject[] randomObjects;
     int border = 1000;
-    float enemyBorder = 150;
+    float enemyBorder = 100;
 
     void Update()
     {
@@ -43,7 +43,7 @@ public class createScript : MonoBehaviour
     void CreateEnemy()
     {
         int index = Random. Range(0, randomObjects.Length);
-        Instantiate(randomObjects[index], new Vector3(Random.Range(-5f,5f), randomObjects[index].transform.position.y, enemyBorder +150f), randomObjects[index].transform.rotation);
-        enemyBorder += 150;
+        Instantiate(randomObjects[index], new Vector3(Random.Range(-5f,5f), randomObjects[index].transform.position.y, enemyBorder +100f), randomObjects[index].transform.rotation);
+        enemyBorder += 100;
     }
 }

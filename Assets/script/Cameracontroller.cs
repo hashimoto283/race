@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cameracontroller : MonoBehaviour
+public class CameraController : MonoBehaviour
 {
     [Header("追従する対象")]
     public GameObject targetObj;

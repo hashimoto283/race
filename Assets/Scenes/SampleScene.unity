@@ -396,6 +396,8 @@ MonoBehaviour:
     type: 3}
   shotSpeed: 8000
   timer: 0
+  RocketCount: 0
+  ItemScript: {fileID: 0}
 --- !u!1 &375918853 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8597203098356442116, guid: 5d672c268d931ee408d9a90c24caf0fa,

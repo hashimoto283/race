@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class movescript : MonoBehaviour
+public class MoveScript : MonoBehaviour
 {
 	float speed = 0f;
     public float movePower = 0.2f;
