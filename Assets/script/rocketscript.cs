@@ -2,15 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class rocketscript : MonoBehaviour
+public class RocketScript : MonoBehaviour
 {
     public GameObject RocketPrefab;
     public float shotSpeed;
     private float timeBetweenShot=1f;
     public float timer;
     public int RocketCount;
-    public itemscript itemScript;
-    // Update is called once per frame
+    public ItemScript ItemScript;
+  
+    public void AddRocketCount(int amount)
+    {
+        Debug.Log(amount);
+        RocketCount += amount;
+    }
+
+   
+    public void Rocket(int count)
+    {
+        RocketCount += count;
+        Debug.Log(count);
+    }
     void Update()
     {
         timer += Time.deltaTime;
@@ -24,6 +36,7 @@ public class rocketscript : MonoBehaviour
                 RocketRb.AddForce(transform.forward * shotSpeed);
                 Destroy(Rocket, 3.0f);
                 RocketCount--;
+                Debug.Log("g");
             }
         }
     }

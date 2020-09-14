@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class itemscript : MonoBehaviour
+public class ItemScript : MonoBehaviour
 {
+    private int addCount = 1;
+    public int additionalcount;
     Rigidbody rb;
-    public int RocketCount;
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -18,8 +18,8 @@ public class itemscript : MonoBehaviour
 
         if (col.gameObject.tag == "Player")
         {
-            RocketCount++;
-            Debug.Log("s");
+            col.transform.Find("ShotRocket").GetComponent<RocketScript>().AddRocketCount(addCount);
+            Debug.Log("addCount");
             Destroy(gameObject);
         }
     }
