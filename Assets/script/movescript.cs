@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MoveScript : MonoBehaviour
 {
+	private float startPos;
 	float speed = 0f;
     public float movePower = 0.2f;
 	public float maxSpeed = 100f;
@@ -13,6 +14,8 @@ public class MoveScript : MonoBehaviour
 	void Start()
 	{
 		rb = GetComponent<Rigidbody>();
+		startPos = transform.position.z;
+		Debug.Log(startPos);
 	}
 
 	void FixedUpdate()
@@ -68,5 +71,9 @@ public class MoveScript : MonoBehaviour
         {
 			speed = 0;
         }
+    }
+    public float CalculatRun()
+    {
+		return transform.position.z - startPos;
     }
 }

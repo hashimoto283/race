@@ -5,13 +5,13 @@ using UnityEngine;
 public class DestoryEnemy : MonoBehaviour
 {
     public float additionalTime;
-    private TimeScript timeScript;
+    private UIManager UIManager;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Rocket"))
         {
-            timeScript = GameObject.FindGameObjectWithTag("Time").GetComponent<TimeScript>();
-            timeScript.AddTime(additionalTime);
+            UIManager = GameObject.FindGameObjectWithTag("UIManager").GetComponent<UIManager>();
+            UIManager.AddTime(additionalTime);
             // ぶつかってきたオブジェクトを破壊する
             Destroy(other.gameObject);
             // このスクリプトがついているオブジェクトを破壊する（thisは省略が可能）

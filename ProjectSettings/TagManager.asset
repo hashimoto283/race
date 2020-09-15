@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Rocket
   - Time
+  - UIManager
   layers:
   - Default
   - TransparentFX
