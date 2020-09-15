@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class TimeScript : MonoBehaviour
 {
     public Text timeText;
@@ -28,6 +28,7 @@ public class TimeScript : MonoBehaviour
         Time.timeScale = 0;
         if (Input.GetMouseButtonDown(0))
         {
+            SceneManager.LoadScene("title");
         }
     }
     public void AddTime(float amountTime)
