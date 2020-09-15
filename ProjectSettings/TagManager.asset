@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Rocket
+  - Time
   layers:
   - Default
   - TransparentFX

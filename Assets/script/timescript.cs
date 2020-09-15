@@ -26,14 +26,17 @@ public class TimeScript : MonoBehaviour
     {
         gameOver.SendMessage("Lose");
         Time.timeScale = 0;
-        if (Input.GetMouseButtonDown(0))
         {
-            SceneManager.LoadScene("title");
+            if (Input.GetMouseButtonDown(0))
+            {
+                SceneManager.LoadScene("title");
+            }
         }
     }
     public void AddTime(float amountTime)
     {
         time += amountTime;
+        Debug.Log(amountTime);
     }
 }
 

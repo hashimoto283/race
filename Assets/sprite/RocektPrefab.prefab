@@ -56,7 +56,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RocketPrefab: {fileID: 211007401083184098}
-  shotSpeed: 1
+  shotSpeed: 30000
   timer: 0
   RocketCount: 1
   ItemScript: {fileID: 5398178229591761270, guid: c8f7888e455443440bc384f13906b1d4,
