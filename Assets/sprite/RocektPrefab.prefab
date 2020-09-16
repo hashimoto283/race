@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 214103311042392940}
   - component: {fileID: 188939184761545732}
-  - component: {fileID: 5575498922852540207}
   - component: {fileID: 196816062738501368}
   - component: {fileID: -5223025485234316620}
   - component: {fileID: 4334525053920766546}
@@ -43,24 +42,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 211007401083184098}
   m_Mesh: {fileID: 4300000, guid: 70885693ea99b8749b751f80202232a3, type: 3}
---- !u!114 &5575498922852540207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 211007401083184098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d15856abd4da59f459a3d28d9d8e7e93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RocketPrefab: {fileID: 211007401083184098}
-  shotSpeed: 30000
-  timer: 0
-  RocketCount: 1
-  ItemScript: {fileID: 5398178229591761270, guid: c8f7888e455443440bc384f13906b1d4,
-    type: 3}
 --- !u!23 &196816062738501368
 MeshRenderer:
   m_ObjectHideFlags: 0

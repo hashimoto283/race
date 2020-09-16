@@ -472,7 +472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RocketPrefab: {fileID: 211007401083184098, guid: 9f3fa32bfc72d3d458b6e9654ac178ca,
     type: 3}
-  shotSpeed: 8000
+  shotSpeed: 30000
   timer: 0
   RocketCount: 0
   ItemScript: {fileID: 0}
@@ -482,6 +482,84 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1929016098}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &424629054
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 424629055}
+  - component: {fileID: 424629056}
+  - component: {fileID: 424629057}
+  m_Layer: 5
+  m_Name: countdown
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &424629055
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424629054}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1282144303}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &424629056
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424629054}
+  m_CullTransparentMesh: 0
+--- !u!114 &424629057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424629054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.8867924, g: 0.08365965, b: 0.08365965, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 60
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 60
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 3
 --- !u!1 &560965041
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,7 +664,6 @@ GameObject:
   - component: {fileID: 572242259}
   - component: {fileID: 572242262}
   - component: {fileID: 572242261}
-  - component: {fileID: 572242260}
   m_Layer: 5
   m_Name: Time
   m_TagString: Time
@@ -613,24 +690,6 @@ RectTransform:
   m_AnchoredPosition: {x: 80, y: -15}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &572242260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 572242258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba9ec5c5b10f84b428585973da547931, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveScript: {fileID: 0}
-  timeText: {fileID: 572242261}
-  time: 60
-  gameOver: {fileID: 54411941}
-  scoreText: {fileID: 0}
-  scoreLabel: {fileID: 0}
 --- !u!114 &572242261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -976,6 +1035,7 @@ RectTransform:
   - {fileID: 54411940}
   - {fileID: 196460366}
   - {fileID: 1388574684}
+  - {fileID: 424629055}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1221,6 +1281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba9ec5c5b10f84b428585973da547931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  countdownText: {fileID: 424629057}
   moveScript: {fileID: 1763678512}
   timeText: {fileID: 572242261}
   time: 5
