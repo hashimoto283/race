@@ -4,15 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 public class GameOver : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
         this.gameObject.GetComponent<Text>().enabled = false;
     }
 
-    // Update is called once per frame
     public void Lose()
     {
+        //GameOver時にテキストを表示
         this.gameObject.GetComponent<Text>().enabled = true;
     }
 }

@@ -12,12 +12,14 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         cam = GetComponent<Camera>();
+        //自分が操作する車の位置を確認
         targetPos = targetObj.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //常に見やすい位置にカメラを固定する
         transform.position += targetObj.transform.position - targetPos;
         targetPos = targetObj.transform.position;
     }
