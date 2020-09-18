@@ -9,8 +9,8 @@ public class GameStart : MonoBehaviour
     /// <summary>
     /// ボタンを押した時にレースシーンに遷移
     /// </summary>
-        public void OnStartButtonClicked()
+    public void OnStartButtonClicked()
     {
-        SceneManager.LoadScene("race");
+      SceneManager.LoadScene("race");
     }
 }

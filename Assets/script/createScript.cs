@@ -53,7 +53,7 @@ public class CreateScript : MonoBehaviour
     void CreateEnemy()
     {
         int index = Random. Range(0, randomObjects.Length);
-        //コースの横幅で自分の車の100f先でランダムに生成する
+        //配列内からランダムに選択されたオブジェクトを、プレイヤーの100f先の位置で、かつ、コース横幅に収まるランダムな範囲で生成
         Instantiate(randomObjects[index], new Vector3(Random.Range(-5f,5f), randomObjects[index].transform.position.y, enemyBorder +100f), randomObjects[index].transform.rotation);
         enemyBorder += 100;
     }

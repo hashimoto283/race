@@ -330,7 +330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -452,7 +452,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5236\u9650\u6642\u9593\u304C\u5207\u308C\u308B\u307E\u3067\u8D70\u308A\u7D9A\u3051\u3088\u3046\uFF01\n\u6575\u3092\u30DF\u30B5\u30A4\u30EB\u3067\u5012\u3059\u3068\u5236\u9650\u6642\u9593\u304C\u5897\u3048\u308B\u3088!"
+  m_Text: "\u5236\u9650\u6642\u9593\u304C\u5207\u308C\u308B\u307E\u3067\u8D70\u308A\u7D9A\u3051\u3088\u3046\uFF01\n\u6575\u3092\u30DF\u30B5\u30A4\u30EB\u3067\u5012\u3059\u3068\u5236\u9650\u6642\u9593\u304C\n\u5897\u3048\u308B\u3088!"
 --- !u!222 &465425624
 CanvasRenderer:
   m_ObjectHideFlags: 0

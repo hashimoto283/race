@@ -11,7 +11,7 @@ public class MoveEnemy : MonoBehaviour
     {
         //Z軸（プレイヤーと同じ）に進む
         transform.Translate(new Vector3(0, 0, enemySpeed));
-        //プレイヤーよりZ軸が追い抜かされると破壊されるように
+        //カメラが敵を写さなくなったら破壊されるように
         if(transform.position.z < Camera.main.transform.position.z)
         {
           Destroy(gameObject);

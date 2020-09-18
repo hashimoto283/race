@@ -10,10 +10,11 @@ public class UIManager: MonoBehaviour
     private bool isCountdown;
     //カウントダウンの秒数
     private float countdownTimer = 4;
+    public Text GameOverText;
     public MoveScript moveScript;
     public Text timeText;
     public float time = 60;
-    public GameOver gameOver;
+    public UIManager gameOver;
     public Text scoreText;
     //スコア以外のテキスト
     public Text scoreLabel;
@@ -21,6 +22,7 @@ public class UIManager: MonoBehaviour
   
     void Start()
     {
+        GameOverText.GetComponent<Text>().enabled = false;
         moveScript.gameObject.SetActive(false);
     }
 
@@ -75,7 +77,7 @@ public class UIManager: MonoBehaviour
     /// <returns></returns>
     IEnumerator GameOver()
     {
-        gameOver.Lose();
+        Lose();
         Time.timeScale = 0;
         DisplayScore();
         yield break;
@@ -99,6 +101,15 @@ public class UIManager: MonoBehaviour
     {
         time += amountTime;
         Debug.Log(amountTime);
+    }
+
+    /// <summary>
+    /// GameOver時の処理
+    /// </summary>
+    public void Lose()
+    {
+        //GameOver時にテキストを表示
+        GameOverText.GetComponent<Text>().enabled = true;
     }
 }
 

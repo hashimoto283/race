@@ -475,7 +475,6 @@ MonoBehaviour:
   shotSpeed: 30000
   timer: 0
   RocketCount: 0
-  ItemScript: {fileID: 0}
 --- !u!1 &375918853 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8597203098356442116, guid: 5d672c268d931ee408d9a90c24caf0fa,
@@ -956,7 +955,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1086,10 +1085,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 800, y: 400}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1379,10 +1378,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countdownText: {fileID: 424629057}
+  GameOverText: {fileID: 54411942}
   moveScript: {fileID: 1763678512}
   timeText: {fileID: 572242261}
   time: 60
-  gameOver: {fileID: 54411941}
+  gameOver: {fileID: 1919447303}
   scoreText: {fileID: 1388574686}
   scoreLabel: {fileID: 196460364}
 --- !u!4 &1919447304
