@@ -23,7 +23,7 @@ public class RocketScript : MonoBehaviour
         Debug.Log(amount);
         RocketCount += amount;
         //残弾数を表示
-        uiManager.DisplayBulletCount();
+        uiManager.DisplayBulletCount(true);
     }
 
     void Update()

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
+
 public class UIManager: MonoBehaviour
 {
     //カウントダウン時のテキスト
@@ -105,6 +107,12 @@ public class UIManager: MonoBehaviour
     {
         time += amountTime;
         Debug.Log(amountTime);
+
+        //時間表示をアニメーション化させる
+        Sequence sequence = DOTween.Sequence();
+        sequence.Append(timeText.transform.DOScale(new Vector3(1.5f, 1.5f, 1.5f), 0.2f));
+        sequence.AppendInterval(0.2f);
+        sequence.Append(timeText.transform.DOScale(Vector3.one, 0.2f));
     }
 
     /// <summary>
@@ -116,10 +124,20 @@ public class UIManager: MonoBehaviour
         GameOverText.GetComponent<Text>().enabled = true;
     }
     
-    public void DisplayBulletCount()
+    /// <summary>
+    /// 残弾数の表示を更新
+    /// </summary>
+    public void DisplayBulletCount(bool isAnime=false)
     {
         bulletcountText.text = rocketScript.RocketCount.ToString();
-
+        //ロケットカウントが増えた時のみ
+        if (isAnime == true)
+        {
+            Sequence sequence = DOTween.Sequence();
+            sequence.Append(bulletcountText.transform.DOScale(new Vector3(1.5f, 1.5f, 1.5f), 0.2f));
+            sequence.AppendInterval(0.2f);
+            sequence.Append(bulletcountText.transform.DOScale(Vector3.one, 0.2f));
+        }
     }
 }
 
