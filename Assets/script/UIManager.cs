@@ -61,6 +61,7 @@ public class UIManager: MonoBehaviour
             //時間切れでゲームオーバー
             isGameOver = true;
             time = 0;
+            timeText.enabled = false;
             StartCoroutine(GameOver());
         }
         //時間が0になるまで制限時間を表示
@@ -84,7 +85,7 @@ public class UIManager: MonoBehaviour
     IEnumerator GameOver()
     {
         Lose();
-        Time.timeScale = 0;
+        moveScript.Stop();
         DisplayScore();
         yield break;
     }
@@ -96,7 +97,19 @@ public class UIManager: MonoBehaviour
     {
         scoreLabel.gameObject.SetActive(true);
         scoreText.gameObject.SetActive(true);
-        scoreText.text = moveScript.CalculatRun().ToString("F2") + "M";
+        float initValue = 0;
+        float score = moveScript.CalculatRun();
+        // DoTweenのSequence(シーケンス)機能を初期化して使用できるようにする
+        Sequence sequence = DOTween.Sequence();
+
+        // シーケンスを利用して、DoTweenの処理を制御したい順番で記述する。まずは①スコアの数字をアニメして表示
+        sequence.Append(DOTween.To(() => initValue,
+                    (num) => {
+                        initValue = num;
+                        scoreText.text = num.ToString()+"M" ;
+                    },
+                    score,
+                    2.0f).SetEase(Ease.InCirc));
     }
 
     /// <summary>

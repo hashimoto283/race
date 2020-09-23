@@ -10,6 +10,7 @@ public class MoveScript : MonoBehaviour
 	public float maxSpeed = 100f;
 	public float carSpeed = 3f;
 	Rigidbody rb;
+	bool isStop = false;
 
 	void Start()
 	{
@@ -20,6 +21,17 @@ public class MoveScript : MonoBehaviour
 
 	void FixedUpdate()
 	{
+		//アクセルを踏まないと減速
+		speed -= 1f;
+		//最低速度
+		if (speed < 0)
+		{
+			speed = 0f;
+		}
+		if(isStop==true)
+        {
+			return;
+        }
 		if (Input.GetKey("up"))
 		{
 			Accel(); //アクセル
@@ -33,12 +45,6 @@ public class MoveScript : MonoBehaviour
 			Left(); //左移動
 		}
 		//アクセル踏まないと減速
-		speed -= 1f;
-		//最低速度
-		if (speed < 0)
-		{
-			speed = 0f;
-		}
 	}
 
 	/// <summary>
@@ -99,5 +105,9 @@ public class MoveScript : MonoBehaviour
     {
 		//プレイヤーの現在地からスタートポジションを引く
 		return transform.position.z - startPos;
+    }
+	public void Stop()
+    {
+		isStop = true;
     }
 }
