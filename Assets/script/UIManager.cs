@@ -19,11 +19,15 @@ public class UIManager: MonoBehaviour
     //スコア以外のテキスト
     public Text scoreLabel;
     private bool isGameOver = false;
-  
+    public Text bulletcountText;
+    public RocketScript rocketScript;
+
     void Start()
     {
         GameOverText.GetComponent<Text>().enabled = false;
         moveScript.gameObject.SetActive(false);
+        //残弾数表示
+        DisplayBulletCount();
     }
 
     void Update()
@@ -110,6 +114,12 @@ public class UIManager: MonoBehaviour
     {
         //GameOver時にテキストを表示
         GameOverText.GetComponent<Text>().enabled = true;
+    }
+    
+    public void DisplayBulletCount()
+    {
+        bulletcountText.text = rocketScript.RocketCount.ToString();
+
     }
 }
 

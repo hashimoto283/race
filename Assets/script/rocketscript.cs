@@ -12,6 +12,7 @@ public class RocketScript : MonoBehaviour
     public float timer;
     //ロケットの撃てるカウント
     public int RocketCount;
+    public UIManager uiManager;
 
     /// <summary>
     ///　ロケットカウントを増やす処理
@@ -21,6 +22,8 @@ public class RocketScript : MonoBehaviour
     {
         Debug.Log(amount);
         RocketCount += amount;
+        //残弾数を表示
+        uiManager.DisplayBulletCount();
     }
 
     void Update()
@@ -42,6 +45,8 @@ public class RocketScript : MonoBehaviour
                 Destroy(Rocket, 3.0f);
                 //ロケットカウントも減る
                 RocketCount--;
+                //残弾数の表示を更新
+                uiManager.DisplayBulletCount();
             }
         }
     }
